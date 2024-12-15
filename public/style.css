@@ -1,0 +1,157 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #3a4a5c;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Weekly Forecast Section */
+#forecast-section {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#forecast-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #444;
+  text-align: center; /* Center the title */
+}
+
+#forecast-container {
+  display: flex;
+  justify-content: center; /* Center forecast days horizontally */
+  gap: 1em;
+  padding: 1em 0;
+}
+
+.forecast-day {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.8em;
+  text-align: center;
+  min-width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-day h3 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  color: #2e2eb5;
+}
+
+.forecast-day p {
+  margin: 0.2em 0;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Graph Section */
+#daily-details {
+  margin-top: 1.5em;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#daily-graph {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Search Box Section */
+#location-input, #get-weather-btn {
+  display: block;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#location-input {
+  width: 60%;
+}
+
+#get-weather-btn {
+  width: 30%;
+  background-color: #2e2eb5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#get-weather-btn:hover {
+  background-color: #1f1f7a;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #forecast-container {
+    flex-wrap: wrap;
+  }
+
+  .forecast-day {
+    min-width: 80px;
+    padding: 0.6em;
+  }
+
+  #forecast-section h2 {
+    font-size: 1.2em;
+  }
+
+  #daily-graph {
+    max-width: 300px;
+  }
+
+  /* Adjust input and button width on smaller screens */
+  #location-input {
+    width: 80%;
+  }
+
+  #get-weather-btn {
+    width: 50%;
+  }
+
+  /* Adjust forecast day card width for mobile */
+  .forecast-day {
+    min-width: 100px;
+    padding: 0.5em;
+  }
+}

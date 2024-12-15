@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="home-page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Weather App</h1>
+    <a href="live-radar.html">Live Radar</a>
+  </header>
+  <main>
+    <section id="forecast-section">
+      <h2>Weekly Forecast, select day for hourly forecast</h2>
+      <div class="search-container">
+        <input type="text" id="location-input" placeholder="Enter location (e.g., London)">
+        <button id="get-weather-btn">Get Weather</button>
+      </div>
+      <div id="forecast-container"></div>
+    </section>
+    <section id="daily-details">
+      <canvas id="daily-graph"></canvas>
+    </section>
+  </main>
+</body>
+</html>
